@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_website/data/Hackmd.dart';
 import 'package:personal_website/page/hackmd/HackmdViewModel.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../ui/LoadingWidget.dart';
 
@@ -52,19 +53,24 @@ class _HackMDPageState extends State<HackMDPage> {
         mainAxisSpacing: 4.0,  // 可選: 添加縱向間距
       ),
       itemBuilder: (context, index) {
-        return Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.black, // 邊框顏色
-              width: 1.0,         // 邊框寬度
+        return GestureDetector(
+          onTap: () {
+            launchUrl(Uri.parse(data?.data?[index].htmlUrl ?? ""));
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black, // 邊框顏色
+                width: 1.0,         // 邊框寬度
+              ),
+              borderRadius: BorderRadius.circular(8.0), // 可選: 邊框圓角
             ),
-            borderRadius: BorderRadius.circular(8.0), // 可選: 邊框圓角
-          ),
-          padding: EdgeInsets.all(8.0), // 可選: 內邊距
-          child: Center(
-            child: Text(
-              "${data?.data?[index].name}",
-              style: TextStyle(color: Colors.black),
+            padding: EdgeInsets.all(8.0), // 可選: 內邊距
+            child: Center(
+              child: Text(
+                "${data?.data?[index].name}",
+                style: TextStyle(color: Colors.black),
+              ),
             ),
           ),
         );
