@@ -1,0 +1,97 @@
+{
+  "educations": [
+    {
+      "end_date": "2019",
+      "major": "資訊工程系",
+      "school": "逢甲大學",
+      "start_date": "2017"
+    },
+    {
+      "end_date": "2014",
+      "major": "高中",
+      "school": "路竹高中",
+      "start_date": "2012"
+    }
+  ],
+  "id": 1,
+  "img": "https://i.imgur.com/GGsyErT.jpg",
+  "job_title": "Android工程師",
+  "name": "蔡尚霖",
+  "skills": [
+    {
+      "items": [
+        "Kotlin",
+        "Java",
+        "Dart",
+        "Python",
+        "C"
+      ],
+      "title": "Programming"
+    },
+    {
+      "items": [
+        "Jetpack",
+        "Git",
+        "Firebase",
+        "Google Play",
+        "Compose",
+        "SQL"
+      ],
+      "title": "Skill"
+    },
+    {
+      "items": [
+        "Chinese",
+        "English"
+      ],
+      "title": "Language"
+    },
+    {
+      "items": [
+        "Glide",
+        "Firebase",
+        "Epoxy",
+        "Room",
+        "RxJava",
+        "Coroutine",
+        "Retorfit",
+        "Okhttp",
+        "GSYPlayer"
+      ],
+      "title": "Third Library"
+    },
+    {
+      "items": [
+        "Firebase Analytics",
+        "Flurry"
+      ],
+      "title": "User Tracker"
+    }
+  ],
+  "socials": [
+    {
+      "icon": "https://i.imgur.com/nHw6kNr.png",
+      "link": "https://github.com/CiaShangLin",
+      "title": "Github"
+    },
+    {
+      "icon": "https://i.imgur.com/tFQtPLX.png",
+      "link": "https://medium.com/@west7418",
+      "title": "Medium"
+    },
+    {
+      "icon": "https://i.imgur.com/g9UMc3n.png",
+      "link": "https://www.linkedin.com/in/%E5%B0%9A%E9%9C%96-%E8%94%A1-a05878175/",
+      "title": "Linkedin"
+    }
+  ],
+  "work_experiences": [
+    {
+      "company": "日新",
+      "description": "\n2024/2~now\n\n維護舊專案\n\n1.優化程式碼刪除冗餘無用程式碼\n\n2.重構程式碼補上測試\n\n3.使用OOP+Design Pattern簡化共用大量重複程式碼\n\n4.減少Api流量，處理生命週期token api 優化從每分鐘3600次-\u003E500次， 減少80%\n\n5.影片測速Api 優化減少每分鐘20%\n\n6.耗時工作改到IO線程減少UI卡頓,例如:寫入資料到SP裡面，查詢安裝APP...\n\n7.優化首頁UI卡頓,提升存留率約1%左右\n\n2019/7~2024/1\n\n主要負責影音APP維護和開發\n1.Firebase Crashlytics不受當機率優化從94%-\u003E99.5%\n2.添加Android防破解技術(NDK)\n3.將專案從Java轉成純Kotlin\n4.從MVP架構轉型成MVVM架構\n5.編寫單元測試和UI測試維護程式碼品質 \n6.減少apk包大小約縮小了40%\n7.繼承GsyPlayer擴展成我司的播放器，配合maven讓其他專案可以共用\n8.用GsyPlayer+MD360Player4Android，客製化VR播放器\n9.使用OOP減少重複程式碼，增加內聚力減低耦合\n10.使用Design Pattern優化開發速度\n11.減少Layout層級優化渲染時間\n12.封裝抽象第三方套件，易於抽換和擴增\n13.嘗試轉型成Flutter\n",
+      "end_date": "now",
+      "position": "Android工程師",
+      "start_date": "2019/7/1"
+    }
+  ]
+}

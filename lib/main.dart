@@ -6,6 +6,7 @@ import 'package:personal_website/page/main/MainTab.dart';
 import 'package:personal_website/page/resume/ResumePage.dart';
 import 'package:personal_website/utils/ColorUtil.dart';
 
+import 'main_view_model.dart';
 import 'page/github/GithubPage.dart';
 import 'page/medium/MediumPage.dart';
 
@@ -14,6 +15,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+
   const MyApp({super.key});
 
   @override
@@ -31,6 +34,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
+
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();

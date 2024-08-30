@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../api/ResumeApi.dart';
 import '../../data/Resume.dart';
+import '../../main_view_model.dart';
 import '../../ui/LoadingWidget.dart';
 import '../../utils/ColorUtil.dart';
 import 'LinkIconWidget.dart';
@@ -18,10 +19,19 @@ class ResumePage extends StatefulWidget {
 }
 
 class _ResumePageState extends State<ResumePage> {
+
+  late MainViewModel _viewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    _viewModel = MainViewModel(); // 創建 MainViewModel 實例
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Resume>(
-      future: ResumeApi.instance.getResume(),
+      future: _viewModel.getResume(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return LoadingWidget();
