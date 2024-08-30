@@ -6,7 +6,7 @@ import 'package:personal_website/page/main/MainTab.dart';
 import 'package:personal_website/page/resume/ResumePage.dart';
 import 'package:personal_website/utils/ColorUtil.dart';
 
-import 'main_view_model.dart';
+import 'page/resume/ResumeViewModell.dart';
 import 'page/github/GithubPage.dart';
 import 'page/medium/MediumPage.dart';
 

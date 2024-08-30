@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../api/ResumeApi.dart';
 import '../../data/Resume.dart';
-import '../../main_view_model.dart';
+import 'ResumeViewModell.dart';
 import '../../ui/LoadingWidget.dart';
 import '../../utils/ColorUtil.dart';
 import 'LinkIconWidget.dart';
@@ -20,12 +20,12 @@ class ResumePage extends StatefulWidget {
 
 class _ResumePageState extends State<ResumePage> {
 
-  late MainViewModel _viewModel;
+  late ResumeViewModel _viewModel;
 
   @override
   void initState() {
     super.initState();
-    _viewModel = MainViewModel(); // 創建 MainViewModel 實例
+    _viewModel = ResumeViewModel();
   }
 
   @override
