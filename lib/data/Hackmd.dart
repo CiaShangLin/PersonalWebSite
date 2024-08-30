@@ -1,0 +1,65 @@
+/// data : [{"name":"Kotlin協程Coroutine學習紀錄","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/B1LiQO7i0"},{"name":"閱讀源碼 dotsindicator","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/B1GPyLo_0"},{"name":"閱讀源碼 Banner","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/ByD9XldrR"},{"name":"LoadMorePatten","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/B1gNvC0E9"},{"name":"閱讀源碼 Balloon","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/ryOkbG-up"},{"name":"閱讀源碼 Alerter","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/HyOY6gVL6"},{"name":"閱讀源碼 DiscreteScrollView","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/S1b53LhSa"},{"name":"閱讀源碼 LinkageRecyclerView","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/HJBTUd2VT"},{"name":"閱讀源碼 PatternLockView","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/H1F8LDs76"},{"name":"閱讀源碼 Jethub","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/B1t8upFQa"},{"name":"閱讀源碼 Compressor","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/HkEH5oPlp"},{"name":"閱讀源碼 Spotlight","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/r1_PF8DX6"},{"name":"影片閱讀紀錄 Unit 为啥还能当函数参数？面向实用的 Kotlin Unit 详解","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/ByBdZqvmC"},{"name":"影片閱讀紀錄 这玩意真的有用吗？对，是的！Kotlin 的 Nothing 详解","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/SkzFJLIXR"},{"name":"影片閱讀紀錄 类声明的右边也能写 by？Kotlin 的接口委托是这么用的","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/B1YJkzS7R"},{"name":"影片閱讀紀錄 两个 this 一起用？Kotlin 的成员扩展函数和 implicit receiver","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/rkms4iQ7R"},{"name":"影片閱讀紀錄 Android 面试黑洞——当我按下 Home 键再切回来，会发生什么？","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/By-0GBfmR"},{"name":"影片閱讀紀錄 「内存抖动」？别再吓唬面试者们了行吗","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/SyGd-_AMA"},{"name":"影片閱讀紀錄 【面试黑洞】Android 的键值对存储有没有最优解？","html_url":"https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/HkzVn-RzA"}]
+
+class Hackmd {
+  Hackmd({
+      List<Data>? data,}){
+    _data = data;
+}
+
+  Hackmd.fromJson(dynamic json) {
+    if (json['data'] != null) {
+      _data = [];
+      json['data'].forEach((v) {
+        _data?.add(Data.fromJson(v));
+      });
+    }
+  }
+  List<Data>? _data;
+Hackmd copyWith({  List<Data>? data,
+}) => Hackmd(  data: data ?? _data,
+);
+  List<Data>? get data => _data;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    if (_data != null) {
+      map['data'] = _data?.map((v) => v.toJson()).toList();
+    }
+    return map;
+  }
+
+}
+
+/// name : "Kotlin協程Coroutine學習紀錄"
+/// html_url : "https://hackmd.io/@-zDQyDkuQPmBOJPBX9LaOw/B1LiQO7i0"
+
+class Data {
+  Data({
+      String? name, 
+      String? htmlUrl,}){
+    _name = name;
+    _htmlUrl = htmlUrl;
+}
+
+  Data.fromJson(dynamic json) {
+    _name = json['name'];
+    _htmlUrl = json['html_url'];
+  }
+  String? _name;
+  String? _htmlUrl;
+Data copyWith({  String? name,
+  String? htmlUrl,
+}) => Data(  name: name ?? _name,
+  htmlUrl: htmlUrl ?? _htmlUrl,
+);
+  String? get name => _name;
+  String? get htmlUrl => _htmlUrl;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['name'] = _name;
+    map['html_url'] = _htmlUrl;
+    return map;
+  }
+
+}
