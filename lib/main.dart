@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_website/page/hackmd/HackmdPage.dart';
+import 'package:personal_website/page/log/LogPage.dart';
 import 'package:personal_website/page/main/AvatarWidget.dart';
 import 'package:personal_website/page/main/HomeTabText.dart';
 import 'package:personal_website/page/main/MainTab.dart';
@@ -94,6 +95,8 @@ class _MyHomePageState extends State<MyHomePage>{
         return const MediumPage();
       case MainTab.HACKMD:
         return const HackMDPage();
+      case MainTab.LOG:
+        return const LogPage();
     }
   }
 }

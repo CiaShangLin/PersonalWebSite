@@ -4,8 +4,8 @@ enum MainTab {
   RESUME(label: '個人履歷'),
   GITHUB(label: 'GitHub'),
   MEDIUM(label: 'Medium'),
-  HACKMD(label: 'HackMD');
-  // DIARY(label: 'Diary');
+  HACKMD(label: 'HackMD'),
+  LOG(label: "開發日誌");
 
   final String label;
 
